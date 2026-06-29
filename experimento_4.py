@@ -10,7 +10,7 @@ class Experimento4:
     def executar(self):
         # Parâmetros Fixos (Experimento 4)
         tam_bloco = 128
-        politica_escrita = 0      # Write-Through
+        politica_escrita = 0      
         associatividade = 4
 
         print("\n9. Anexo A:")
@@ -22,7 +22,7 @@ class Experimento4:
         print(f"{'Associatividade':<30} | {associatividade} blocos")
         print("-" * 55)
 
-        variacoes_blocos = [2**i for i in range(4, 11)]  # 16 ate 1024
+        variacoes_blocos = [2**i for i in range(4, 11)] 
         resultados_lru = []
         resultados_aleatoria = []
 
