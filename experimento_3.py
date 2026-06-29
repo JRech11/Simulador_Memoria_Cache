@@ -11,7 +11,7 @@ class Experimento3:
         # Parâmetros Fixos (Experimento 3)
         tam_bloco = 128
         tamanho_total_cache_bytes = 8192
-        politica_escrita = 1      # Write-Back
+        politica_escrita = 1      
         politica_substituicao = 'LRU'
 
         print("\n9. Anexo A:")
@@ -25,11 +25,11 @@ class Experimento3:
         print("-" * 55)
 
         # Associatividade de 1 a 64 em potências de 2
-        variacoes_assoc = [2**i for i in range(0, 7)]  # 1, 2, 4, 8, 16, 32, 64
+        variacoes_assoc = [2**i for i in range(0, 7)]  
         resultados = []
 
         for associatividade in variacoes_assoc:
-            num_linhas = tamanho_total_cache_bytes // tam_bloco  # 64 linhas fixas
+            num_linhas = tamanho_total_cache_bytes // tam_bloco  
 
             if num_linhas < associatividade:
                 continue
