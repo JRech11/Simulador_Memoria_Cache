@@ -10,9 +10,9 @@ class Experimento2:
     def executar(self):
         # Parâmetros Fixos do Experimento 2 (8 KB totais)
         tamanho_total_cache_bytes = 8192  
-        politica_escrita = 0              # Write-Through
+        politica_escrita = 0             
         politica_substituicao = 'LRU'
-        associatividade = 2               # 2-way
+        associatividade = 2               
         
         print("\n9. Anexo A:")
         print("Tabela 3 - Parametros da Simulacao (Impacto do Bloco)")
@@ -24,14 +24,12 @@ class Experimento2:
         print(f"{'Associatividade':<30} | {associatividade} blocos")
         print("-" * 55)
         
-        # Variando o bloco de 8 bytes até 4096 bytes
         variacoes_bloco = [2**i for i in range(3, 13)] 
         resultados = []
 
         for tam_bloco in variacoes_bloco:
             num_linhas = tamanho_total_cache_bytes // tam_bloco
             
-            # Validação física: Não dá para ter menos linhas do que vias de associatividade
             if num_linhas < associatividade:
                 continue
 
